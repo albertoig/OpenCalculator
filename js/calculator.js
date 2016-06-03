@@ -13,8 +13,31 @@ var Calculator = (function(id) {
 		}
 	};
 
+	/**
+	 * Print character on selected input
+	 * @param character
+	 * @returns {*}
+     */
 	var printOnInput = function(character){
-		document.getElementById(idInput).te
+		return document.getElementById(idInput).value += character;
+	};
+
+	/**
+	 * Clean selected input text
+	 */
+	var cleanInput = function(numberOfCharacters) {
+		return document.getElementById(idInput).value = _cleanCharacters(numberOfCharacters);
+	};
+
+	/**
+	 * Return string from input cleaning the specified number of characters
+	 * @param numberOfCharacters
+	 * @private
+     */
+	var _cleanCharacters = function(numberOfCharacters) {
+		var inputCalculator = document.getElementById(idInput);
+		var length = inputCalculator.value.length - numberOfCharacters;
+		return document.getElementById(idInput).value.substr(0, length);
 	};
 
 	/**
@@ -40,11 +63,27 @@ var Calculator = (function(id) {
 	};
 
 	/**
+	 * Calculate operation from input
+	 */
+	var calculate = function(){
+
+	};
+
+	/**
 	 * Public methods
 	 */
 	return {
 		checkText: function(e) {
 			return checkText(e);
+		},
+		cleanInput: function(numberOfCharacters) {
+			return cleanInput(numberOfCharacters);
+		},
+		printOnInput: function(character){
+			return printOnInput(character);
+		},
+		calculate: function() {
+			return calculate();
 		}
 	}
 });
