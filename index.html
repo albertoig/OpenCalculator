@@ -27,24 +27,26 @@
 			<button onclick="oCalculator.printOnInput('2')">2</button>
 			<button onclick="oCalculator.printOnInput('3')">3</button>
 			<button onclick="oCalculator.printOnInput('/')">/</button>
-			<button onclick="oCalculator.cleanInput(1)">CE</button>
+			<button onclick="oCalculator.printOnInput('^')">^</button>
 		</div>
 		<div class="row">
 			<button onclick="oCalculator.printOnInput('4')">4</button>
 			<button onclick="oCalculator.printOnInput('5')">5</button>
 			<button onclick="oCalculator.printOnInput('6')">6</button>
-			<button onclick="oCalculator.printOnInput('X')">X</button>
+			<button onclick="oCalculator.printOnInput('*')">*</button>
+			<button onclick="oCalculator.cleanInput(1)">CE</button>
 		</div>
 		<div class="row">
 			<button onclick="oCalculator.printOnInput('7')">7</button>
 			<button onclick="oCalculator.printOnInput('8')">8</button>
 			<button onclick="oCalculator.printOnInput('9')">9</button>
 			<button onclick="oCalculator.printOnInput('-')">-</button>
+			<button onclick="oCalculator.cleanInput(0)">Clean ALL</button>
 		</div>
 		<div class="row">
 			<button onclick="oCalculator.printOnInput('0')">0</button>
 			<button onclick="oCalculator.printOnInput('.')">.</button>
-			<button onclick="oCalculator.calculate()">=</button>
+			<button onclick="oCalculator.operate()">=</button>
 			<button onclick="oCalculator.printOnInput('+')">+</button>
 		</div>
 	</div>

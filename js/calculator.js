@@ -5,6 +5,7 @@
 var Calculator = (function(id) {
 
 	var idInput = id;
+	var oMathLibrary = new mathLibrary();
 
 	var checkText = function(e) {
 		if(_checkIfCharacterIsANumber(e) ||
@@ -26,6 +27,9 @@ var Calculator = (function(id) {
 	 * Clean selected input text
 	 */
 	var cleanInput = function(numberOfCharacters) {
+		if(numberOfCharacters === 0) {
+			return document.getElementById(idInput).value = '';
+		}
 		return document.getElementById(idInput).value = _cleanCharacters(numberOfCharacters);
 	};
 
@@ -65,8 +69,10 @@ var Calculator = (function(id) {
 	/**
 	 * Calculate operation from input
 	 */
-	var calculate = function(){
-
+	var operate = function(){
+		var inputText = document.getElementById(idInput);
+		var operations = inputText.value;
+		return (inputText.value = oMathLibrary.calculate(operations));
 	};
 
 	/**
@@ -82,8 +88,8 @@ var Calculator = (function(id) {
 		printOnInput: function(character){
 			return printOnInput(character);
 		},
-		calculate: function() {
-			return calculate();
+		operate: function() {
+			return operate();
 		}
 	}
 });
