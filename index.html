@@ -18,37 +18,48 @@
 	</script>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<input id="inputCalculator" type="text" onkeypress="return oCalculator.checkText(event)">
+<div class="container">
+	<div class="row">
+		<div class="col-two col-two-margin">
+			<img class="round" src="img/alberto.jpg"/>
 		</div>
-		<div class="row">
-			<button onclick="oCalculator.printOnInput('1')">1</button>
-			<button onclick="oCalculator.printOnInput('2')">2</button>
-			<button onclick="oCalculator.printOnInput('3')">3</button>
-			<button onclick="oCalculator.printOnInput('/')">/</button>
-			<button onclick="oCalculator.printOnInput('^')">^</button>
-		</div>
-		<div class="row">
-			<button onclick="oCalculator.printOnInput('4')">4</button>
-			<button onclick="oCalculator.printOnInput('5')">5</button>
-			<button onclick="oCalculator.printOnInput('6')">6</button>
-			<button onclick="oCalculator.printOnInput('*')">*</button>
-			<button onclick="oCalculator.cleanInput(1)">CE</button>
-		</div>
-		<div class="row">
-			<button onclick="oCalculator.printOnInput('7')">7</button>
-			<button onclick="oCalculator.printOnInput('8')">8</button>
-			<button onclick="oCalculator.printOnInput('9')">9</button>
-			<button onclick="oCalculator.printOnInput('-')">-</button>
-			<button onclick="oCalculator.cleanInput(0)">Clean ALL</button>
-		</div>
-		<div class="row">
-			<button onclick="oCalculator.printOnInput('0')">0</button>
-			<button onclick="oCalculator.printOnInput('.')">.</button>
-			<button onclick="oCalculator.operate()">=</button>
-			<button onclick="oCalculator.printOnInput('+')">+</button>
+		<div class="col-two">
+			<a class="tooltips" href="#">
+				<span>Hi! This is an open calculator, you can use it whatever you want! Come on try it!</span>
+			</a>
 		</div>
 	</div>
+	<div class="row">
+		<input id="inputCalculator" class="input-text" type="text" onkeypress="return oCalculator.checkText(event)">
+	</div>
+	<div class="row">
+		<button class="calc-button-two" onclick="oCalculator.cleanInput(1)">CE</button>
+		<button class="calc-button" onclick="oCalculator.printOnInput('/')">/</button>
+		<button class="calc-button right-button" onclick="oCalculator.printOnInput('^')">^</button>
+	</div>
+	<div class="row">
+		<button class="calc-button" onclick="oCalculator.printOnInput('1')">1</button>
+		<button class="calc-button" onclick="oCalculator.printOnInput('2')">2</button>
+		<button class="calc-button" onclick="oCalculator.printOnInput('3')">3</button>
+		<button class="calc-button right-button" onclick="oCalculator.printOnInput('*')">*</button>
+	</div>
+	<div class="row">
+		<button class="calc-button" onclick="oCalculator.printOnInput('4')">4</button>
+		<button class="calc-button" onclick="oCalculator.printOnInput('5')">5</button>
+		<button class="calc-button" onclick="oCalculator.printOnInput('6')">6</button>
+		<button class="calc-button right-button" onclick="oCalculator.printOnInput('-')">-</button>
+	</div>
+	<div class="row">
+		<button class="calc-button" onclick="oCalculator.printOnInput('7')">7</button>
+		<button class="calc-button" onclick="oCalculator.printOnInput('8')">8</button>
+		<button class="calc-button" onclick="oCalculator.printOnInput('9')">9</button>
+		<button class="calc-button right-button" onclick="oCalculator.printOnInput('+')">+</button>
+	</div>
+	<div class="row">
+		<button class="calc-button-two" onclick="oCalculator.printOnInput('0')">0</button>
+		<button class="calc-button" onclick="oCalculator.printOnInput('.')">.</button>
+		<button class="calc-button right-button" onclick="oCalculator.operate()">=</button>
+	</div>
+</div>
 </body>
 </html>
