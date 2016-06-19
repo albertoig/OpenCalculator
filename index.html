@@ -14,7 +14,7 @@
 	<script src="js/math.js" type="text/javascript"></script>
 	<script src="js/calculator.js" type="text/javascript"></script>
 	<script>
-		var oCalculator = new Calculator('inputCalculator');
+		var oCalculator = new Calculator('inputCalculator', 'calcButton');
 	</script>
 </head>
 <body>
@@ -58,7 +58,7 @@
 	<div class="row">
 		<button class="calc-button-two" onclick="oCalculator.printOnInput('0')">0</button>
 		<button class="calc-button" onclick="oCalculator.printOnInput('.')">.</button>
-		<button class="calc-button right-button" onclick="oCalculator.operate()">=</button>
+		<button id="calcButton" class="calc-button right-button" onclick="oCalculator.operate()">=</button>
 	</div>
 </div>
 </body>
