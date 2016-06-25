@@ -18,11 +18,10 @@ var Calculator = (function(idInputCalc, idButton) {
 	};
 
 	document.onkeydown = function(e) {
-		constantEntered = false;
 		e = e || window.event;
 		switch (e.keyCode) {
 			case 13:
-				addToStack();
+				document.getElementById(idCalcButton).click();
 				break;
 			case 48:
 				printOnInput(0);
@@ -54,17 +53,20 @@ var Calculator = (function(idInputCalc, idButton) {
 			case 57:
 				printOnInput(9);
 				break;
-			case 69:
-				constant('e');
+			case 221:
+				printOnInput('*');
 				break;
-			case 88:
-				operator("multiply");
+			case 219:
+				printOnInput('');
 				break;
-			case 173:
-				operator("subtract");
+			case 187:
+				printOnInput('+');
+				break;
+			case 189:
+				printOnInput('-');
 				break;
 			case 191:
-				operator("divide");
+				printOnInput('/');
 				break;
 		}
 	};
