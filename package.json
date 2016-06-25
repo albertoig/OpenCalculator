@@ -1,0 +1,24 @@
+{
+  "name": "opencalculator",
+  "version": "1.0.0",
+  "description": "Open source calculator",
+  "main": "index.html",
+  "scripts": {
+    "copy": "rm -rf ./cordovaProject/www && cp -R www cordovaProject/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertoig/OpenCalculator.git"
+  },
+  "keywords": [
+    "calculator",
+    "Polish",
+    "notation"
+  ],
+  "author": "Alberto Iglesias Gallego",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/albertoig/OpenCalculator/issues"
+  },
+  "homepage": "https://github.com/albertoig/OpenCalculator#readme"
+}
