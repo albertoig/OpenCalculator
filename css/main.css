@@ -140,19 +140,19 @@ input {
 
 .col-two {
 	display:flex;
-	flex: 2 2 calc(200px);
+	flex: 2 2 calc(180px);
 	box-sizing: border-box;
 	justify-content: center;
 	align-items: center;
 }
 
 .calc-button {
-	flex: 1 1 100px;
+	flex: 1 1 90px;
 	box-sizing: border-box;
 }
 
 .calc-button-two {
-	flex: 2 2 calc(200px);
+	flex: 2 2 calc(180px);
 	box-sizing: border-box;
 }
 

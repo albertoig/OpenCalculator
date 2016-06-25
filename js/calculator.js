@@ -2,51 +2,11 @@
  * Calculator functionality library
  * @type {Function}
  */
-var Calculator = (function(idInputCalc, idCalcButton) {
+var Calculator = (function(idInputCalc, idButton) {
 
 	var idInput = idInputCalc;
-	var idCalcButton = idCalcButton;
+	var idCalcButton = idButton;
 	var oMathLibrary = new mathLibrary();
-
-	var checkText = function(e) {
-
-		_pressCalcButtonIfIsPressedOnInput(e);
-
-		return !!(_checkIfCharacterIsANumber(e) ||
-		_checkIfCharacterIsAnOperator(e));
-	};
-
-	var _pressCalcButtonIfIsPressedOnInput = function(e) {
-		if(e.keyCode === 13){
-			return document.getElementById(idCalcButton).click();
-		}
-	};
-
-	/**
-	 * Check if character is a number
-	 * @private
-	 * @param e
-	 * @returns {boolean}
-	 */
-	var _checkIfCharacterIsANumber = function(e) {
-		var key = window.Event ? e.which : e.keyCode;
-		return (key >= 48 && key <= 57)
-	};
-
-	/**
-	 * Check if a character is an operator
-	 * @private
-	 * @param e
-	 * @returns {boolean}
-	 */
-	var _checkIfCharacterIsAnOperator = function(e) {
-		var key = window.Event ? e.which : e.keyCode;
-		return (key === 191 ||
-				key === 42 ||
-				key === 45 ||
-				key === 94 ||
-				key === 43)
-	};
 
 	/**
 	 * Print character on selected input
@@ -57,6 +17,58 @@ var Calculator = (function(idInputCalc, idCalcButton) {
 		return document.getElementById(idInput).value += character;
 	};
 
+	document.onkeydown = function(e) {
+		constantEntered = false;
+		e = e || window.event;
+		switch (e.keyCode) {
+			case 13:
+				addToStack();
+				break;
+			case 48:
+				printOnInput(0);
+				break;
+			case 49:
+				printOnInput(1);
+				break;
+			case 50:
+				printOnInput(2);
+				break;
+			case 51:
+				printOnInput(3);
+				break;
+			case 52:
+				printOnInput(4);
+				break;
+			case 53:
+				printOnInput(5);
+				break;
+			case 54:
+				printOnInput(6);
+				break;
+			case 55:
+				printOnInput(7);
+				break;
+			case 56:
+				printOnInput(8);
+				break;
+			case 57:
+				printOnInput(9);
+				break;
+			case 69:
+				constant('e');
+				break;
+			case 88:
+				operator("multiply");
+				break;
+			case 173:
+				operator("subtract");
+				break;
+			case 191:
+				operator("divide");
+				break;
+		}
+	};
+	
 	/**
 	 * Clean selected input text
 	 * @param numberOfCharacters
@@ -107,3 +119,4 @@ var Calculator = (function(idInputCalc, idCalcButton) {
 		}
 	}
 });
+

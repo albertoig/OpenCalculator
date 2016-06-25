@@ -103,10 +103,10 @@ var mathLibrary = (function() {
 	 * change normal string operation to polish notation string
 	 */
 	var infixToPostfix = function(infix) {
-		var outputQueue = "";
+		var outputQueue = '';
 		var operatorStack = [];
 
-		infix = infix.replace(/\s+/g, "");
+		infix = infix.replace(/\s+/g, '');
 		infix = _clean(infix.split(/([\+\-\*\/\^\(\)])/));
 
 		for(var i = 0; i < infix.length; i++) {
@@ -172,8 +172,8 @@ var mathLibrary = (function() {
 			if(_isNumeric(postfix[i])) {
 				resultStack.push(postfix[i]);
 			} else {
-				var x = resultStack.pop();
 				var y = resultStack.pop();
+				var x = resultStack.pop();
 
 				resultStack.push(
 					_operate(postfix[i], x, y)
